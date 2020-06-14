@@ -1,0 +1,446 @@
+﻿<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Single Page Responsive Web Page</title>
+
+    <style>
+        .carousel-content {
+            align: center;
+            position: absolute;
+            bottom: 50%;
+            left: 40%;
+            z-index: 30;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,.6);
+        }
+        
+        body {
+            position: relative;
+        }
+
+        #myNavbar {
+            margin: 0;
+            padding-top: 5px;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .btn-info {
+            margin: 0.5px;
+            background-color: lightgrey;
+            color:ghostwhite;
+        }
+        
+        
+        #section1 {
+            padding-top: 50px;
+            height: 500px;
+            color: #fff;
+            background-color: tomato;
+        }
+
+        #section2 {
+            padding-top: 50px;
+            height: 1300px;
+            color: slateblue;
+            background-image: url("j.jpg");
+            background-repeat: repeat;
+            background-size: contain;
+            background-attachment: scroll;
+        }
+
+        #section3 {
+            padding-top: 50px;
+            height: 1800px;
+            color: #fff;
+            background-image: url("j.jpg"), url("b.jpg");
+            background-position: bottom, top;
+            background-repeat: no-repeat, repeat;
+            background-size: 1500px, 1500px, auto;
+            background-attachment: scroll, fixed;
+        }
+
+        #section41 {
+            padding-top: 50px;
+            height: 600px;
+            color: #fff;
+            background-image: url("m.jpg");
+            background-position: top;
+            background-repeat:  repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #section42 {
+            padding-top: 50px;
+            height: 200px;
+            color: #fff;
+            background-image: url("j.jpg");
+            background-repeat: repeat;
+            background-size: contain;
+            background-attachment: scroll;
+        }
+
+        .sample {
+            font: 2rem 'AmstelvarAlpha', sans-serif,blue;
+        }
+
+    </style>
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="text-center">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        </div>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <button type="button" class="btn btn-info">
+             <li><a href="#myCarousel">Home</a></li>
+          </button>
+          <button type="button" class="btn btn-info">
+              <li><a href="#section2">About Us</a></li>
+          </button>
+           <button type="button" class="btn btn-info">
+               <li><a href="#section3">Services</a></li>
+           </button>
+           <button type="button" class="btn btn-info">
+               <li class="dropdown">
+                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact <span class="caret"></span></a>
+                   <ul class="dropdown-menu">
+                       <li><a href="#section41">Section 4-1</a></li>
+                       <li><a href="#section42">Section 4-2</a></li>
+                   </ul>
+               </li>
+            </button>
+</ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="d.jpg" alt="Chania">
+                <div class="carousel-content">
+                    <h1 style="color:white;text-shadow: 2px 4px 3px black;" align="center">CONQUER</h1>
+                </div>
+                <div class="carousel-caption">
+                    <p>A first bootstrap project</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="e.jpg" alt="Chicago">
+                <div class="carousel-content">
+                    <h1 style="color:white;text-shadow: 2px 4px 3px black;">CONQUER</h1>
+                </div>
+                <div class="carousel-caption">
+                    <p>A first bootstrap project</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="c.jpg" alt="New York">
+                <div class="carousel-content">
+                    <h1 style="color:white;text-shadow: 2px 4px 3px black;">CONQUER</h1>
+                </div>
+                <div class="carousel-caption">
+                    <p>A first bootstrap project</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div id="section2" class="container-fluid">
+        <p style="color:dimgrey;font-family:'Courier New';text-align:center;font-size:300%;"><u><b>About Us</b></u></p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+
+                    <img src="a.jpg" alt="Lights" style="width:500px;height:250px;">
+                    <div class="caption">
+                        <h3 style="color:blue;font-family:verdana;text-align:center;"><b>Lorem ipsum</b></h3>
+                        <p style="color:dimgray;font-family:courier;text-align:center;">donec id elit non mi porta gravida at eget metus.</p>
+                        <a href="#" class="btn btn-success btn-block" role="button"><h5 align="center">Link Button</h5></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+
+                    <img src="b.jpg" alt="Nature" style="width:500px;height:250px;">
+                    <div class="caption">
+                        <h3 style="color:red;font-family:verdana;text-align:center;"><b>Lorem ipsum</b></h3>
+                        <p style="color:dimgray;font-family:courier;text-align:center;">donec id elit non mi porta gravida at eget metus.</p>
+                        <a href="#" class="btn btn-danger btn-block" role="button"><h5 align="center">Link Button</h5></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="f.jpg" alt="Fjords" style="width:500px;height:250px;">
+                    <div class="caption">
+                        <h3 style="color:forestgreen;font-family:verdana;text-align:center;"><b>Lorem ipsum</b></h3>
+                        <p style="color:dimgray;font-family:courier;text-align:center;">donec id elit non mi porta gravida at eget metus.</p>
+                        <a href="#" class="btn btn-primary btn-block" role="button"><h5 align="center">Link Button</h5></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="thumbnail">
+
+                    <img src="g.jpg" alt="Lights" style="width:700px;height:300px;">
+                    <div class="caption">
+                        <h3 style="color:gray;font-family:verdana;text-align:center;">Two Column Left Side</h3>
+                        <p style="color:dimgray;font-family:courier;text-align:center;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.
+                            </p><br />
+                        <p style="color:dimgray;font-family:courier;text-align:center;">
+                            Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="thumbnail">
+
+                    <img src="h.jpg" alt="Nature" style="width:700px;height:300px;">
+                    <div class="caption">
+                        <h3 style="color:gray;font-family:verdana;text-align:center;">Two Column Right Side</h3>
+                        <p style="color:dimgray;font-family:courier;text-align:center;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.
+                        </p><br />
+                        <p style="color:dimgray;font-family:courier;text-align:center;">
+                            Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus.
+                        </p>
+                        <!-- Trigger the modal with a button -->
+                        <div class="text-center">
+                            <button type="button" class="btn btn btn-lg" data-toggle="modal" data-target="#myModal" align="center">Read More</button>
+                        </div>
+                            <!-- Modal -->
+                            <div id="myModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Modal Header</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Some text in the modal.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section3" class="container-fluid">
+        <div class="text-center">
+            <h2>Our Services</h2>
+            <p>
+                Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id
+            </p>
+            <p> felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia.</p>
+            <p>
+                Etiam a mi quis arcu varius condimentum.
+            </p>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <div class="row">
+            <div class="col-md-3" style="background-color:gainsboro;">
+                <div class="thumbnail">
+
+                    <img src="a.jpg" alt="Lights" style="width:500px;height:250px;">
+                    <div class="caption">
+                        <h3 style="color:gray;font-family:verdana;text-align:center;"><b>Column One</b></h3>
+                        <p style="color:dimgray;font-family:courier;text-align:center;">donec id elit non mi porta gravida at eget metus.</p>
+                        <br /><br /><br />
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3" style="background-color:gainsboro;">
+                <div class="thumbnail">
+
+                    <img src="i.jpg" alt="Lights" style="width:500px;height:250px;">
+                    <div class="caption">
+                        <h3 style="color:gray;font-family:verdana;text-align:center;"><b>Column Two</b></h3>
+                        <p style="color:dimgray;font-family:courier;text-align:center;">donec id elit non mi porta gravida at eget metus.</p>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-default" role="button"><h5 align="center">Read more...</h5></a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3" style="background-color:gainsboro;">
+                <div class="thumbnail">
+
+                    <img src="b.jpg" alt="Nature" style="width:500px;height:250px;">
+                    <div class="caption">
+                        <h3 style="color:gray;font-family:verdana;text-align:center;"><b>Column Three</b></h3>
+                        <p style="color:dimgray;font-family:courier;text-align:center;">donec id elit non mi porta gravida at eget metus.</p>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-default" role="button"><h5 align="center">Details</h5></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3" style="background-color:gainsboro;">
+                <div class="thumbnail">
+                    <img src="f.jpg" alt="Fjords" style="width:500px;height:250px;">
+                    <div class="caption">
+                        <h3 style="color:gray;font-family:verdana;text-align:center;"><b>Column Four</b></h3>
+                        <p style="color:dimgray;font-family:courier;text-align:center;">donec id elit non mi porta gravida at eget metus.</p>
+                        <br /><br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12" style="background-color:gainsboro;">
+            <div class="thumbnail">
+                <img src="l.png" alt="Fjords" style="width:1500px;height:550px;">
+                <div class="caption">
+                    <h3 style="color:gray;font-family:verdana;text-align:center;"><b>Big Column</b></h3>
+                    <p style="color:dimgray;font-family:courier;text-align:center;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium. Vivamus dictum nisi ac fermentum interdum. Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus. Praesent volutpat cursus rhoncus. Aenean arcu diam, suscipit ac neque in, sollicitudin convallis orci.
+                    </p><br /><p style="color:dimgray;font-family:courier;text-align:center;">
+                        Fusce eu porta massa, sed tincidunt turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus a urna tellus. Integer pharetra vitae nisi et lacinia. Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque quis, maximus eget nisi.
+                    </p>
+                    <div class="text-center">
+                        <a href="#" class="btn btn-default" role="button"><h5 align="center">Read more...</h5></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="section41" class="container-fluid">
+        <br /><br />
+        <h1 align="center">Contact Form</h1>
+        <p align="center" style="color:lightgray;font-family:courier;text-shadow: 2px 4px 3px yellow;">
+            Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id
+        </p>
+        <p align="center" style="color:lightgray;font-family:courier;text-shadow: 2px 4px 3px yellow;">
+            felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia.
+        </p>
+        <p align="center" style="color:lightgray;font-family:courier;text-shadow: 2px 4px 3px yellow;">
+            Etiam a mi quis arcu varius condimentum.
+        </p>
+
+        <div class="text-center">
+            <form class="form-inline">
+                <div class="input-group">
+                    <input type="text" class="form-control" style="background-color:ghostwhite;opacity:0.7;" size="40" placeholder="Name" required>
+                </div>
+            </form>
+            <br />
+            <form class="form-inline">
+                <div class="input-group">
+                    <input type="email" class="form-control" style="background-color:ghostwhite;opacity:0.7;" size="40" placeholder="Email Address" required>
+                </div>
+            </form>
+            <br />
+            <form class="form-inline">
+                <div class="input-group">
+                    <input type="text" class="form-control" style="background-color:ghostwhite;opacity:0.7;" size="40" placeholder="Subject" required>
+                </div>
+            </form>
+            <br />
+            <form class="form-inline">
+                
+                    <div class="input-group">
+                        <input type="text" class="form-control" style="background-color:ghostwhite;opacity:0.7;" size="40" placeholder="Comment..." required>
+                    </div>
+                <br /><br />
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+            
+    <div id="section42" class="container-fluid">
+                
+                <p style="color:darkslategray;font-family:verdana;text-align:right;">Phone No.:XXXXXXXXX</p>
+                <p style="color:darkslategray;font-family:verdana;text-align:right;">Email Address:xyz@abc.co.in</p>
+                <br />
+                <p style="color:gray;font-family:verdana;text-align:center;"><i>Copyright © 2084 Your Company Name | Design: tanushreeb</i></p>
+                <div class="text-right">
+                    <div class="container">
+                    <p>
+                        <button type="button" class="btn btn-info">
+                            <a href="#myCarousel"><span class="glyphicon glyphicon-chevron-up"></span>Return to Top</a>
+                        </button>
+                    </p>
+                    </div>
+                </div>
+
+
+</body>
+</html>
